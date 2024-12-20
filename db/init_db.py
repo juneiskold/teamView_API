@@ -66,3 +66,30 @@ def init_db():
         db.add(player)
         db.flush()
         players.append(player)
+
+
+    # accolade data
+    accolades_data = [
+        {
+            "title": "Premier League Championship",
+            "description": "2022/23 Season Winners",
+            "date_awarded": date(2023, 5, 28),
+            "recipient_type": "Team",
+            "recipient_id": teams[0].id
+        },
+
+        {
+            "title": "Golden Boot",
+            "description": "Top Scorer of the Season",
+            "date_awarded": date(2023, 5, 28),
+            "recipient_type": "Player",
+            "recipient_id": players[0].id
+        }
+    ]
+
+    for accolade_data in accolades_data:
+        accolade = AccoladeDB(**accolade_data)
+        db.add(accolade)
+
+    db.commit()
+    db.close()
