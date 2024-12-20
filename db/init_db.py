@@ -19,7 +19,7 @@ def init_db():
     # pre-recorded teams
     teams_data = [
         {
-            "name": "Manchester United",
+            "name": "Manchester United Football Club",
             "founded_date": date(1878, 1, 1),
             "home_stadium": "Old Trafford",
             "coach_name": "Ruben Amorim"
@@ -30,6 +30,13 @@ def init_db():
             "founded_date": date(1902, 3, 6),
             "home_stadium": "Estadio Santiago Bernabeu",
             "coach_name": "Carlo Ancelotti"
+        },
+
+        {
+            "name": "Manchester City Football Club",
+            "founded_date": date(1880, 1, 1),
+            "home_stadium": "Etihad",
+            "coach_name": "Pep Gaurdiola"
         }
     ]
 
