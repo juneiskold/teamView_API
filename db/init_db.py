@@ -64,6 +64,22 @@ def init_db():
             "position": "Midfielder",
             "jersey_number": 10,
             "team_id": teams[1].id
+        },
+
+        {
+            "name": "Erling Haaland",
+            "age": 24,
+            "position": "Striker",
+            "jersey_number": 9,
+            "team_id": teams[2].id
+        },
+
+        {
+            "name": "Kyle Walker",
+            "age": 34,
+            "position": "Right-back",
+            "jersey_number": 2,
+            "team_id": teams[2].id
         }
     ]
 
@@ -82,7 +98,7 @@ def init_db():
             "description": "2022/23 Season Winners",
             "date_awarded": date(2023, 5, 28),
             "recipient_type": "Team",
-            "recipient_id": teams[0].id
+            "recipient_id": teams[2].id
         },
 
         {
@@ -90,7 +106,7 @@ def init_db():
             "description": "Top Scorer of the Season",
             "date_awarded": date(2023, 5, 28),
             "recipient_type": "Player",
-            "recipient_id": players[0].id
+            "recipient_id": players[2].id
         }
     ]
 
