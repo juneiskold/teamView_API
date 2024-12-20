@@ -40,3 +40,29 @@ def init_db():
         db.add(team)
         db.flush()
         teams.append(team)
+
+    # Players data
+    players_data = [
+        {
+            "name": "Bruno Fernandes",
+            "age": 28,
+            "position": "Midfielder",
+            "jersey_number": 8,
+            "team_id": teams[0].id
+        },
+
+        {
+            "name": "Luka Modric",
+            "age": 39,
+            "position": "Midfielder",
+            "jersey_number": 10,
+            "team_id": teams[1].id
+        }
+    ]
+
+    players = []
+    for players_data in players_data:
+        player = PlayerDB(**players_data)
+        db.add(player)
+        db.flush()
+        players.append(player)
